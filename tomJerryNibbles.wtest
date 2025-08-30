@@ -40,3 +40,11 @@ test "si corre 38 metros su velocidad pasa a ser 24 (su energia es 190)" {
   tom.correr(38)
   assert.equals(24, tom.velocidadMaxima())
 }
+
+test "Tom puede cazar a 99 metros" {
+  assert.that(tom.puedeCazar(99))
+}
+
+test "Tom NO puede caazr a 120metros" {
+  assert.notThat(tom.puedeCazar(120))
+}
