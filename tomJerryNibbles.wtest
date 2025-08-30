@@ -21,3 +21,22 @@ test "Si come a Nibbles, pasa a tener de velocidad máxima 18.7 (su energía es 
   tom.comer(nibbles)
   assert.equals(18.7, tom.velocidadMaxima())
 }
+
+test "si Jerry cumple años (3 años de edad), y luego Tom lo vuelve a comer, pasaría a tener 25.9 (su energia es 209)" {
+  tom.comer(jerry)
+  tom.correr(24)
+  tom.comer(nibbles)
+  jerry.cumplirAnios()
+  tom.comer(jerry)
+  assert.equals(25.9, tom.velocidadMaxima())
+}
+
+test "si corre 38 metros su velocidad pasa a ser 24 (su energia es 190)" {
+  tom.comer(jerry)
+  tom.correr(24)
+  tom.comer(nibbles)
+  jerry.cumplirAnios()
+  tom.comer(jerry)
+  tom.correr(38)
+  assert.equals(24, tom.velocidadMaxima())
+}
